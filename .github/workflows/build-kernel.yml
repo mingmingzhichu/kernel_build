@@ -13,7 +13,7 @@ jobs:
       - name: Setup environment
         run: |
           sudo apt update 
-          wget http://ports.ubuntu.com/pool/universe/p/python-defaults/python2_2.7.18-3_amd64.deb
+          wget https://ubuntu.pkgs.org/22.04/ubuntu-universe-amd64/python2_2.7.18-3_amd64.deb
           sudo dpkg -i python2_2.7.18-3_arm64.deb
           echo "ANYKERNEL_SOURCE=$(cat config.env | grep -w "ANYKERNEL_SOURCE" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
           echo "ANYKERNEL_SOURCE_BRANCH=$(cat config.env | grep -w "ANYKERNEL_SOURCE_BRANCH" | head -n 1 | cut -d "=" -f 2)" >> $GITHUB_ENV
